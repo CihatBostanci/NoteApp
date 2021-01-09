@@ -42,13 +42,13 @@ We are expecting at least:
 ### Realized While Writing This App  ###
 
 While doing this app, I want to explain my tech stack in android development process.
-* Firstly, This app created with MVVM (Model-View-ViewModel) that is recommended by Google writed Kotlin 100%.
-* While using MVVM I chose Single Activity - Multiple Fragment Structure with Jetpack Navigation Architecture Components
-* On the other hand we know that if the app is not big enough as we can use Single Activity-Multiple Fragments structure otherwise it can not be good performance such as CPU, Memory Allocation and Memory Leaks
-* Besides that I used Light weight Koin Dependency Injection Library that provides SOLID and doing maintainable test easily and works as Service Locater.
-* While doing database operation, I used Coroutines to handle. It is easily lifecycle aware and lightweight thread system to deal with Input Output operations. Thus Main thread may not overload.
+* Firstly, This app created with MVVM(Model-View-ViewModel) that is recommended by Google and written on Kotlin Language 100%.
+* While using MVVM, I chose Single Activity - Multiple Fragment Structure with JetPack Navigation Architecture Components
+* On the other hand we know that if the app is not big enough as we can use Single Activity-Multiple Fragments structure otherwise it can not be good performance such as CPU, Memory Allocation and Memory Leaks etc.
+* Besides that, I used Light weight Koin Dependency Injection Library works as Service Locater that provides SOLID principles and doing maintainable test easily.
+* While doing database operation, I used Coroutines to handle. It can easily lifecycle aware and lightweight thread system to deal with Input Output operations with IO Thread. Thus Main thread may not overload.
 * For the UI, the Material Library used in this project as possible and use some Animations and Transitions.
-* For the local provider, I used Room Database and SQLite.
+* For the local data provider, I used Room SQLite DarBase and SharedPreferences.
 * Business Operation are in the following; Users can edit, delete and create their notes. There are two tables one - to - many relationships each other that are NoteModel and UserModel
 * For the Helper to User Operations I Used Shared Preferences Manager while create, edit and delete operations and to handle Users.
 
