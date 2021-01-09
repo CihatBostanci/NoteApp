@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/strokeBorder"
     tools:context=".login.LoginFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,9 +19,8 @@
             android:fontFamily="@font/opensanslightitalic"
             android:gravity="center"
             android:text="Take Your Note"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="30sp"
             android:textStyle="italic|bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.219"
@@ -62,7 +62,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/opensansitalic"
+                    android:fontFamily="@font/opensansregular"
                     android:gravity="center"
                     android:text="Login"
                     android:textColor="@color/colorPrimary"
@@ -73,6 +73,24 @@
                     app:layout_constraintTop_toTopOf="parent"
 
                     />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TILLoginUserName"
+                    style="@style/modifiedTextInputLayout"
+                    app:layout_constraintBottom_toTopOf="@+id/TILLoginEmail"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TWLoginTitle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETLoginUserName"
+                        style="@style/modifiedEditText"
+                        android:autofillHints=""
+                        android:background="@android:color/transparent"
+                        android:drawableStart="@drawable/ic_baseline_person_24"
+                        android:hint="User Name"
+
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/TILLoginEmail"
@@ -80,7 +98,7 @@
                     app:layout_constraintBottom_toTopOf="@+id/TILLoginPassword"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/TWLoginTitle">
+                    app:layout_constraintTop_toBottomOf="@+id/TILLoginUserName">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/ETLoginEmail"
@@ -116,7 +134,9 @@
                     style="@style/loginButton"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:text="Submit"
+                    android:text="SUBMIT"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/opensanslightitalic"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/TILLoginPassword" />

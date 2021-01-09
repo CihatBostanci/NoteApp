@@ -8,4 +8,17 @@
     <color name="errorColor">#d0021b</color>
     <color name="backgroundGrayColor">#f2f2f2</color>
     <color name="transparent">@android:color/transparent</color>
+
+
+    <color name="blueColorDark">#64c3eb</color>
+    <color name="greenColorDark">#5bb381</color>
+    <color name="yellowColorDark">#e3b34c</color>
+    <color name="redColorDark">#ce375c</color>
+
+    <color name="strokeBorder">#29354D</color>
+    <color name="stroke">#F3E5F5</color>
+    <color name="greenLight">#B2EBF2</color>
+
+
+
 </resources>

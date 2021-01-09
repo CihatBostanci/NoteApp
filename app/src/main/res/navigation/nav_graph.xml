@@ -22,7 +22,17 @@
         android:id="@+id/homeFragment"
         android:name="com.task.noteapp.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_createANoteModalBottomSheetFragment"
+            app:destination="@id/createANoteModalBottomSheetFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_updateNoteModalBottomSheetFragment"
+            app:destination="@id/updateNoteModalBottomSheetFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.task.noteapp.login.LoginFragment"
@@ -32,4 +42,14 @@
             android:id="@+id/action_loginFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/createANoteModalBottomSheetFragment"
+        android:name="com.task.noteapp.createanote.CreateANoteModalBottomSheetFragment"
+        android:label="fragment_create_a_note_modal_bottom_sheet"
+        tools:layout="@layout/fragment_create_a_note_modal_bottom_sheet" />
+    <dialog
+        android:id="@+id/updateNoteModalBottomSheetFragment"
+        android:name="com.task.noteapp.updatenote.UpdateNoteModalBottomSheetFragment"
+        android:label="fragment_update_note_modal_bottom_sheet"
+        tools:layout="@layout/fragment_update_note_modal_bottom_sheet" />
 </navigation>

@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.NoteApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#FEFEFD</item>
-        <item name="colorPrimaryVariant">#090808</item>
+        <item name="colorPrimary">#29354D</item>
+        <item name="colorPrimaryVariant">#82B1FF</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorOnSecondary">@color/black</item>
@@ -39,6 +39,15 @@
         <item name= "android:drawablePadding">10dp</item>
         <item name="android:fontFamily">@font/opensansitalic</item>
     </style>
+    <style name="modifiedEditTextNotBackground" parent="parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name= "android:maxLines">1</item>
+        <item name= "android:drawablePadding">10dp</item>
+        <item name="android:fontFamily">@font/opensansitalic</item>
+    </style>
     <style name="modifiedEditTextPassword" parent="parent">
         <item name="android:background">@drawable/cardviewshape</item>
         <item name="android:layout_width">match_parent</item>
@@ -53,13 +62,14 @@
     </style>
 
 
+
     <style name="viewParent">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-    <style name="loginButton" parent="viewParent" style="?attr/materialButtonOutlinedStyle">
+    <style name="loginButton" parent="viewParent" style="@style/Widget.MaterialComponents.Button.TextButton.Icon">
         <item name="android:background">@drawable/login_button_bk</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold</item>
     </style>
 </resources>
