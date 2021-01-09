@@ -18,10 +18,7 @@ interface NoteDAO {
     @Query("DELETE FROM NoteModel WHERE noteId = :noteId")
     fun deleteByNoteId(noteId: Int)
 
-    /**
-     * Updating only amount and price
-     * By order id
-     */
     @Query("UPDATE NoteModel SET noteTitle = :noteTitle, noteDesc = :noteDescription , noteCreateDate = :noteCreateDate, noteEditFlag = 1 WHERE noteId =:id")
     fun updateNoteTitleDescriptionAndCreateDateById(noteTitle: String, noteDescription: String, noteCreateDate:String , id: Int)
+
 }

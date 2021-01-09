@@ -172,7 +172,8 @@ class HomeFragment : BaseFragment(), View.OnClickListener,
                     noteAdapter = NoteAdapter(
                         noteListNonNull,
                         this,
-                        this
+                        this,
+                        requireContext()
                     )
                     val layoutManager = LinearLayoutManager(requireContext())
                     binding.RVNoteList.layoutManager = layoutManager

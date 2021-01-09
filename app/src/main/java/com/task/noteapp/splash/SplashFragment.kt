@@ -24,7 +24,7 @@ private const val SPLASH_TAG = "SPLASHFRATAG"
  */
 class SplashFragment : BaseFragment() , CoroutineScope {
 
-    private val SPLASH_TIME_OUT =  6000L
+    private val SPLASH_TIME_OUT =  4000L
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main + Job()
 

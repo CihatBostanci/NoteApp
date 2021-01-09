@@ -12,7 +12,8 @@ class UpdateNoteRepository(private val noteDAO: NoteDAO) {
             noteDAO.updateNoteTitleDescriptionAndCreateDateById(
                 noteTitle = note.noteTitle,
                 noteDescription = note.noteDesc,
-                noteCreateDate = note.noteCreateDate, id = note.noteId
+                noteCreateDate = note.noteCreateDate,
+                id = note.noteId
             )
         }
     }

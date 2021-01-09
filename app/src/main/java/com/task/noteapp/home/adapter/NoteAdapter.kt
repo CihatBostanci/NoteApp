@@ -1,19 +1,29 @@
 package com.task.noteapp.home.adapter
 
+import android.content.Context
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.RequiresApi
+import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.task.noteapp.R
 import com.task.noteapp.database.model.NoteModel
+import com.task.noteapp.extensions.hide
+import com.task.noteapp.extensions.show
 
 class NoteAdapter(private val dataSet: MutableList<NoteModel>,
                   private val deleteNoteItemClickListener:
                                 NoteAdapter.ViewHolder.deleteNoteItemClickListener,
                   private val editNoteItemClickListener:
-                                NoteAdapter.ViewHolder.editNoteItemClickListener) :
+                                NoteAdapter.ViewHolder.editNoteItemClickListener,
+                  private val context : Context
+) :
+
     RecyclerView.Adapter<NoteAdapter.ViewHolder>() {
 
     /**
@@ -26,6 +36,9 @@ class NoteAdapter(private val dataSet: MutableList<NoteModel>,
         val noteCreatedDate: TextView
         val noteDelete: ImageView
         val noteEdit: ImageView
+        val noteEditFlag: ImageView
+        val cLNoteItem : ConstraintLayout
+
 
         init {
             // Define click listener for the ViewHolder's View.
@@ -34,6 +47,8 @@ class NoteAdapter(private val dataSet: MutableList<NoteModel>,
             noteCreatedDate = view.findViewById(R.id.TWNoteItemCreatedDate)
             noteDelete = view.findViewById(R.id.IVNoteItemDelete)
             noteEdit = view.findViewById(R.id.IVNoteItemEdit)
+            noteEditFlag = view.findViewById(R.id.IVEditFlag)
+            cLNoteItem = view.findViewById(R.id.CLNoteItem)
         }
 
         interface deleteNoteItemClickListener {
@@ -55,6 +70,7 @@ class NoteAdapter(private val dataSet: MutableList<NoteModel>,
     }
 
     // Replace the contents of a view (invoked by the layout manager)
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
 
         // Get element from your dataset at this position and replace the
@@ -62,6 +78,13 @@ class NoteAdapter(private val dataSet: MutableList<NoteModel>,
         viewHolder.noteTitle.text = dataSet[position].noteTitle
         viewHolder.noteDescription.text = dataSet[position].noteDesc
         viewHolder.noteCreatedDate.text = dataSet[position].noteCreateDate
+        when(dataSet[position].noteEditFlag){
+            0 ->  { viewHolder.noteEditFlag.hide()}
+            1 ->  { viewHolder.cLNoteItem.setBackgroundColor(context.getColor(R.color.greenLight))
+                viewHolder.noteEditFlag.show()}
+        }
+
+
 
         viewHolder.noteDelete.setOnClickListener {
            deleteNoteItemClickListener.deleteNoteItemClickListener(dataSet[position])
