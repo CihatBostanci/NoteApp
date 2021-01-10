@@ -2,10 +2,10 @@ package com.task.noteapp.updatenote
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.task.noteapp.MainActivity
@@ -66,7 +66,7 @@ class UpdateNoteModalBottomSheetFragment : BottomSheetDialogFragment(), View.OnC
     }
 
     private fun initObservers() {
-        updateNoteViewModel.updatedNoteLiveData.observe(viewLifecycleOwner,_updateNoteObserver)
+        updateNoteViewModel.updatedNoteLiveData.observe(viewLifecycleOwner, _updateNoteObserver)
     }
 
     private fun setUIInit() {

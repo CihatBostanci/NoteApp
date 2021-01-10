@@ -116,13 +116,13 @@ class CreateANoteModalBottomSheetFragment:  BottomSheetDialogFragment(), View.On
         } else {
             binding.TILAddNoteTitle.isErrorEnabled = false
         }
-        if (binding.ETAddNoteDescription.text?.length !in 2..40 )
+        if (binding.ETAddNoteDescription.text?.length !in 2..100)
         {
-            binding.TILAddNoteDescription.error = NOTE_DESCRIPTION_INVALID_MESSAGE
+            binding.ETAddNoteDescription.error = NOTE_DESCRIPTION_INVALID_MESSAGE
             validationFlag = false
             return validationFlag
         } else {
-            binding.TILAddNoteDescription.isErrorEnabled = false
+            binding.ETAddNoteDescription.isEnabled = false
         }
 
         return validationFlag

@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:clipToPadding="false"
-    android:paddingTop="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="150dp"
     android:background="@color/backgroundGrayColor"
-    android:paddingBottom="?android:attr/actionBarSize"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".createanote.CreateANoteModalBottomSheetFragment">
 
@@ -51,27 +51,39 @@
                     android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/TILAddNoteDescription"
-            style="@style/modifiedTextInputLayout"
+
+        <LinearLayout
+            android:id="@+id/LLTakeNote"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="9"
             android:layout_margin="15dp"
-            app:hintTextColor="@color/yellowColorDark"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            android:background="@drawable/note_edit_background"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TILAddNoteTitle">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/ETAddNoteDescription"
-                    style="@style/modifiedEditTextNotBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:autofillHints=""
-                    android:background="@color/transparent"
-                    android:backgroundTint="@color/yellowColorDark"
-                    android:drawableStart="@drawable/ic_baseline_note_add_24"
-                    android:hint="Note Description"
-                    android:maxLength="40"
+                    android:layout_margin="5dp"
+                    android:ems="10"
+                    android:fontFamily="@font/opensansregular"
+                    android:textSize="14sp"
                     android:maxLines="2"
-                    android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
+                    android:background="@color/transparent"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:textColor="@android:color/black"
+                    android:drawableStart="@drawable/ic_baseline_note_add_24"
+                    android:drawablePadding="5dp"
+                    android:hint="Note Description"
+                    android:maxLength="100"
+                    />
+        </LinearLayout>
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/BTNCreateANote"
@@ -82,7 +94,7 @@
             android:fontFamily="@font/opensanslightitalic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TILAddNoteDescription" />
+            app:layout_constraintTop_toBottomOf="@+id/LLTakeNote" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
