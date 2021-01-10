@@ -48,7 +48,9 @@ While doing this app, I want to explain my tech stack in android development pro
 * Besides that, I used Light weight Koin Dependency Injection Library works as Service Locater that provides SOLID principles and doing maintainable test easily.
 * While doing database operation, I used Coroutines to handle. It can easily lifecycle aware and lightweight thread system to deal with Input Output operations with IO Thread. Thus Main thread may not overload.
 * For the UI, the Material Library used in this project as possible and use some Animations and Transitions.
-* For the local data provider, I used Room SQLite DarBase and SharedPreferences.
-* Business Operation are in the following; Users can edit, delete and create their notes. There are two tables one - to - many relationships each other that are NoteModel and UserModel
-* For the Helper to User Operations I Used Shared Preferences Manager while create, edit and delete operations and to handle Users.
+* For the local data provider, I used Room SQLite DataBase and SharedPreferences.
+* Business Operation are in the following; Users can edit, delete and create their notes. There are two tables one - to - many relationships each other that are NoteModel(represents Many) and UserModel (represents One)
+* For the Helper to User Operations, I Used Shared Preferences Manager while create, edit and delete operations and to handle Users.
+* Unit tests were written for repository and view model
+* Trying to use Kotlin Lint and Android name conventions.
 

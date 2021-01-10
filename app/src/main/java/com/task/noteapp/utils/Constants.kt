@@ -21,7 +21,9 @@ fun isValidPassword(password: String?): Boolean {
     val matcher: Matcher
     val passwordPattern = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$"
     pattern = Pattern.compile(passwordPattern)
-    matcher = pattern.matcher(password)
+
+    matcher = pattern.matcher(password ?: "")
+
     return matcher.matches()
 }
 

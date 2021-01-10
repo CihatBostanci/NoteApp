@@ -87,7 +87,7 @@ class UpdateNoteModalBottomSheetFragment : BottomSheetDialogFragment(), View.OnC
          * @return A new instance of fragment UpdateNoteModalBottomSheetFragment.
          */
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance() =
             UpdateNoteModalBottomSheetFragment().apply {
             }
     }
