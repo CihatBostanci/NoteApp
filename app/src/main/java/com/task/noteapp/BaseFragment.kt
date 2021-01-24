@@ -20,7 +20,7 @@ abstract class BaseFragment: Fragment(), ProgressDisplay, IOnBackPressed {
         savedInstanceState: Bundle?
     ): View? {
         return TextView(activity).apply {
-            setText("Base Fragment")
+            text = "Base Fragment"
         }
     }
 

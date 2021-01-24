@@ -16,7 +16,7 @@ import kotlin.coroutines.CoroutineContext
 
 
 private const val SPLASH_TAG = "SPLASHFRATAG"
-
+private const val HAVE_IT_YOUR_WAY= "Have It Your Way"
 /**
  * A simple [Fragment] subclass.
  * Use the [SplashFragment.newInstance] factory method to
@@ -42,7 +42,7 @@ class SplashFragment : BaseFragment() , CoroutineScope {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentSplashBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -54,7 +54,7 @@ class SplashFragment : BaseFragment() , CoroutineScope {
     }
 
     private fun setUIInit() {
-        binding.TWSplashTitle.text = "Have It Your Way"
+        binding.TWSplashTitle.text = HAVE_IT_YOUR_WAY
         val animation = AnimationUtils.loadAnimation(requireContext(), R.anim.bounce)
         binding.TWSplashTitle.animation = animation
 
@@ -70,12 +70,9 @@ class SplashFragment : BaseFragment() , CoroutineScope {
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
          * @return A new instance of fragment SplashFragment.
          */
-        // TODO: Rename and change types and number of parameters
+
         @JvmStatic
         fun newInstance() =
             SplashFragment().apply {

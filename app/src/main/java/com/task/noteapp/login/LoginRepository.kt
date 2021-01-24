@@ -1,10 +1,8 @@
 package com.task.noteapp.login
 
 import com.task.noteapp.database.UserDAO
-import com.task.noteapp.database.model.NoteModel
 import com.task.noteapp.database.model.UserModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 
 class LoginRepository (private val userDAO: UserDAO){

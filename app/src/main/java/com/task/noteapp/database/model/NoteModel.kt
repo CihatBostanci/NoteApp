@@ -1,7 +1,6 @@
 package com.task.noteapp.database.model
 
 import androidx.room.Entity
-import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 import java.io.Serializable
 

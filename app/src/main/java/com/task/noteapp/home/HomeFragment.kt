@@ -33,8 +33,8 @@ private const val HOME_TAG = "HOMEFRATAG"
  * create an instance of this fragment.
  */
 class HomeFragment : BaseFragment(), View.OnClickListener,
-    NoteAdapter.ViewHolder.editNoteItemClickListener,
-    NoteAdapter.ViewHolder.deleteNoteItemClickListener{
+    NoteAdapter.ViewHolder.EditNoteItemClickListener,
+    NoteAdapter.ViewHolder.DeleteNoteItemClickListener{
 
 
     private val homeViewModel by viewModel<HomeViewModel>()
@@ -50,26 +50,23 @@ class HomeFragment : BaseFragment(), View.OnClickListener,
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        EventBus.getDefault().register(this);
+        EventBus.getDefault().register(this)
     }
 
     override fun onDetach() {
         super.onDetach()
-        EventBus.getDefault().unregister(this);
+        EventBus.getDefault().unregister(this)
     }
 
     @Subscribe
@@ -94,7 +91,10 @@ class HomeFragment : BaseFragment(), View.OnClickListener,
     private fun setUIInit() {
         val user = getUserNameFromSharedPref()
         binding.FABCreateANote.bringToFront()
-        binding.TWHomeTitle.text = "$user Notes"
+        user?.let {
+            binding.TWHomeTitle.text = "$user NOTES"
+        }
+
         binding.IWHomeLogOut.setOnClickListener(this)
         binding.FABCreateANote.setOnClickListener(this)
 
@@ -106,12 +106,8 @@ class HomeFragment : BaseFragment(), View.OnClickListener,
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
          * @return A new instance of fragment HomeFragment.
          */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() =
             HomeFragment().apply {
@@ -193,11 +189,11 @@ class HomeFragment : BaseFragment(), View.OnClickListener,
                 showToast(it.message)
             }
             Status.SUCCESS -> {
-                it.data?.let { noteListNonNull ->
+                it.data?.let { _ ->
                     hide()
                     Log.d(HOME_TAG, it.data.toString())
                     showToast(DELETE_MESSAGE)
-                    getUserIdFromSharedPref()?.let { homeViewModel.fetchDataAllNotes(it) }
+                    getUserIdFromSharedPref()?.let {  userIdNonNull->homeViewModel.fetchDataAllNotes(userIdNonNull) }
                 }
             }
         }

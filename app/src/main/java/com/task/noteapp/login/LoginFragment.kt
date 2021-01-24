@@ -38,15 +38,11 @@ class LoginFragment : BaseFragment(), View.OnClickListener {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
@@ -107,12 +103,8 @@ class LoginFragment : BaseFragment(), View.OnClickListener {
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
          * @return A new instance of fragment LoginFragment.
          */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() =
             LoginFragment().apply {
@@ -210,7 +202,7 @@ class LoginFragment : BaseFragment(), View.OnClickListener {
                 showToast(it.message)
             }
             Status.SUCCESS -> {
-                it.data?.let { noteListNonNull ->
+                it.data?.let { _ ->
                     hide()
                     Log.d(LOGIN_FRAGMENT_TAG, it.data.toString())
                     showToast(ADDED_SUCCESS)

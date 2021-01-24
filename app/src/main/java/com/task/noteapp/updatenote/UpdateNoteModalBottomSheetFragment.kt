@@ -82,8 +82,6 @@ class UpdateNoteModalBottomSheetFragment : BottomSheetDialogFragment(), View.OnC
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
          *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
          * @return A new instance of fragment UpdateNoteModalBottomSheetFragment.
          */
         @JvmStatic
@@ -101,7 +99,7 @@ class UpdateNoteModalBottomSheetFragment : BottomSheetDialogFragment(), View.OnC
     }
 
     private fun updateNoteAction() {
-        var _noteModel = noteModel?.apply {
+        val noteModel = noteModel?.apply {
             noteTitle      = binding.ETUpdateNoteTitle.text.toString()
             noteDesc       = binding.ETUpdateNoteDescription.text.toString()
             noteCreateDate = getTimeNow()
@@ -110,7 +108,7 @@ class UpdateNoteModalBottomSheetFragment : BottomSheetDialogFragment(), View.OnC
                 userId = it
             }
         }
-        _noteModel?.let {
+        noteModel?.let {
             updateNoteViewModel.updateNoteItem(it)
         }
 

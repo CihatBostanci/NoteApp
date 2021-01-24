@@ -28,7 +28,7 @@ class HomeViewModel (private val homeRepository: HomeRepository): ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val dataNoteList = homeRepository.fetchAllNotes(userId)
-                dataNoteList?.let {
+                dataNoteList.let {
                     _noteListLiveData.postValue(Resource.success(data = it))
                 }
             } catch (ex:Exception){

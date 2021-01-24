@@ -39,7 +39,7 @@ class MainApplication: Application() {
         sharedPreferencesManager = SharedPreferencesManager.defaultPrefs(applicationContext)
         super.onCreate()
         startKoin {
-            Log.i("tag", "Koin")
+            Log.i(MAINAPPLICATIONTAG, "Koin")
             androidContext(this@MainApplication)
             modules(databaseModule, repositoryModule, viewModelModule)
         }

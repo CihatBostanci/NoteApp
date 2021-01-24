@@ -1,6 +1,5 @@
 package com.task.noteapp.database.model
 
-import android.provider.ContactsContract
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey

@@ -48,17 +48,6 @@ class HomeViewModelTest {
 
 
     @Test
-    fun `fetch all notes should call get from repository`() = runBlockingTest {
-
-        sut.fetchDataAllNotes(userIdMock)
-
-        coVerify {
-            homeRepository.fetchAllNotes(userIdMock)
-        }
-    }
-
-
-    @Test
     fun `delete  note should remove from repository by id`() = runBlockingTest {
 
         sut.deleteNoteItem(noteIdMock)

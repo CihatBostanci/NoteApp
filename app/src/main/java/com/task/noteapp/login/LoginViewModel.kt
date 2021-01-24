@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.task.noteapp.database.model.NoteModel
 import com.task.noteapp.database.model.UserModel
 import com.task.noteapp.utils.Resource
 import kotlinx.coroutines.Dispatchers

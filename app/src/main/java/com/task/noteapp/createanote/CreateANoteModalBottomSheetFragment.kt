@@ -1,30 +1,22 @@
 package com.task.noteapp.createanote
 
-import android.content.Context
-import android.content.DialogInterface
 import android.os.Bundle
-import android.os.Parcelable
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.task.noteapp.MainActivity
 import com.task.noteapp.MainApplication
-import com.task.noteapp.R
 import com.task.noteapp.database.model.NoteModel
 import com.task.noteapp.databinding.FragmentCreateANoteModalBottomSheetBinding
 import com.task.noteapp.manager.SharedPreferencesManager.get
 import com.task.noteapp.utils.*
 import org.greenrobot.eventbus.EventBus
 import org.koin.android.viewmodel.ext.android.viewModel
-import java.io.Serializable
-import java.text.SimpleDateFormat
-import java.util.*
+
 
 private const val CREATE_A_NOTE_FRA_TAG = "CREATENOTEFRATAG"
 
@@ -86,12 +78,8 @@ class CreateANoteModalBottomSheetFragment:  BottomSheetDialogFragment(), View.On
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
          * @return A new instance of fragment CreateANoteModalBottomSheetFragment.
          */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() =
             CreateANoteModalBottomSheetFragment().apply {

@@ -1,12 +1,7 @@
 package com.task.noteapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
-import android.view.View
-import android.widget.ProgressBar
-import android.widget.Toast
-import com.task.noteapp.utils.ProgressDisplay
 
 const val MAINACTIVITYTAG = "MAINACTTAG"
 

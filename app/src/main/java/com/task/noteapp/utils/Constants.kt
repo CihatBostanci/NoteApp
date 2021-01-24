@@ -58,5 +58,4 @@ const val ADDED_SUCCESS = "User Added successfully"
 
 //*****************************************************************
 //Bundle Keys
-const val CLOSE_MODAL_BOTTOM_SHEET_KEY = "CloseClickListener"
 const val UPDATE_KEY = "Update"
