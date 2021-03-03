@@ -8,7 +8,7 @@ This project is simple Android  Note App to learn recommended by Google [MVVM](h
 and  Repository Pattern.
 
 ## Technology 
-Try to use these technology [Coroutines](https://developer.android.com/kotlin/coroutines), [Room] (https://developer.android.com/training/data-storage/room)
+Try to use these technology [Coroutines](https://developer.android.com/kotlin/coroutines), [Room](https://developer.android.com/training/data-storage/room)
 , [Navigation Component](https://developer.android.com/guide/navigation/navigation-getting-started),
 [unit test with io mockk](https://mockk.io/), [koin](https://insert-koin.io/) etc. without remote service.
 
