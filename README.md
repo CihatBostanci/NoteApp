@@ -1,9 +1,21 @@
-# Note App Android Implementation
+# Note App
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Structure](#structure)
 
-### Realized While Writing This App  ###
+## General info
+This project is simple Android  Note App to learn recommended by Google [MVVM](https://developer.android.com/jetpack/guide)
+and  Repository Pattern.
+
+## Technology 
+Try to use these technology [Coroutines](https://developer.android.com/kotlin/coroutines), [Room] (https://developer.android.com/training/data-storage/room)
+, [Navigation Component](https://developer.android.com/guide/navigation/navigation-getting-started),
+[unit test with io mockk](https://mockk.io/), [koin](https://insert-koin.io/) etc. without remote service.
+
+## Structure
 
 While doing this app, I want to explain my tech stack in android development process.
-* Firstly, This app created with MVVM(Model-View-ViewModel) that is recommended by Google and written on Kotlin Language 100%.
+* Firstly, This app created with [MVVM (Model-View-ViewModel) ](https://developer.android.com/jetpack/guide) that is recommended by Google and written on Kotlin Language 100%.
 * While using MVVM, I chose Single Activity - Multiple Fragment Structure with JetPack Navigation Architecture Components
 * On the other hand we know that if the app is not big enough as we can use Single Activity-Multiple Fragments structure otherwise it can not be good performance such as CPU, Memory Allocation and Memory Leaks etc.
 * Besides that, I used Light weight Koin Dependency Injection Library works as Service Locater that provides SOLID principles and doing maintainable test easily.
