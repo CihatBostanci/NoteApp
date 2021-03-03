@@ -39,6 +39,10 @@ if note updated note changed.
 
 ![Create A Note Page](https://github.com/CihatBostanci/NoteApp/blob/main/app/src/main/res/drawable/createanote.png?raw=true "Create A Note")
 
+* Update A Note
+
+![Update A Note Page](https://github.com/CihatBostanci/NoteApp/blob/main/app/src/main/res/drawable/updatenote.png?raw=true "Update A Note")
+
 
 * Note List
 
