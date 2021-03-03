@@ -2,6 +2,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Structure](#structure)
+* [Features](#features)
 
 ## General info
 This project is simple Android  Note App to learn recommended by Google [MVVM](https://developer.android.com/jetpack/guide)
