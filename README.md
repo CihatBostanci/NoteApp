@@ -28,3 +28,23 @@ While doing this app, I want to explain my tech stack in android development pro
 * Unit tests were written for repository and view model
 * Trying to use Kotlin Lint and Android name conventions.
 
+## Feature
+Project is included according to user create a notes, update their notes and delete their notes
+if note updated note changed.
+* Login Page
+
+![Login Page](https://github.com/CihatBostanci/NoteApp/blob/main/app/src/main/res/drawable/loginpage.png?raw=true "Login Page")
+
+* Create A Note
+
+![Create A Note Page](https://github.com/CihatBostanci/NoteApp/blob/main/app/src/main/res/drawable/createanote.png?raw=true "Create A Note")
+
+
+* Note List
+
+![ Note List](https://github.com/CihatBostanci/NoteApp/blob/main/app/src/main/res/drawable/notelist.png?raw=true "Note List")
+
+
+* Note Delete
+
+![ Note Delete](https://github.com/CihatBostanci/NoteApp/blob/main/app/src/main/res/drawable/notedelete.png?raw=true "Note Deletet")
